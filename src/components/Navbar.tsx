@@ -1,44 +1,15 @@
 import React from 'react';
+import logoImg from '../assets/images/maroon_tech_logo_1780149048378.png';
 
 export function MaroonTechBirdLogo({ className = "w-6 h-6", white = false }: { className?: string; white?: boolean }) {
-  const strokeColor = white ? "#FFFFFF" : "var(--color-primary)";
   return (
-    <svg
-      className={className}
-      viewBox="0 0 120 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M15 82 L42 28 L58 45 L82 12 Q90 8 95 14 L88 22 C84 26 80 32 75 42 L52 75"
-        stroke={strokeColor}
-        strokeWidth="7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M42 28 L68 55 L82 92"
-        stroke={strokeColor}
-        strokeWidth="7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M15 82 C10 75 12 62 22 52 L42 28"
-        stroke={strokeColor}
-        strokeWidth="5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M82 12 C90 12 95 18 97 22 Q101 25 106 20"
-        stroke={strokeColor}
-        strokeWidth="6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <circle cx="89" cy="20" r="3" fill={strokeColor} />
-    </svg>
+    <img
+      src={logoImg}
+      alt="Maroon Tech Logo"
+      className={`${className} object-contain`}
+      referrerPolicy="no-referrer"
+      style={white ? { filter: "brightness(0) invert(1)" } : undefined}
+    />
   );
 }
 

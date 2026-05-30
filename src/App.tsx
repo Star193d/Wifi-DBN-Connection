@@ -19,11 +19,36 @@ export default function App() {
 
   useEffect(() => {
     const handleHashChange = () => {
-      setCurrentHash(window.location.hash);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const hash = window.location.hash;
+      setCurrentHash(hash);
+      
+      const isAnchor = hash && !hash.startsWith('#/');
+      if (isAnchor) {
+        const id = hash.substring(1);
+        setTimeout(() => {
+          const element = document.getElementById(id);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 120);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     };
 
     window.addEventListener('hashchange', handleHashChange);
+
+    // Initial load scroll
+    if (window.location.hash && !window.location.hash.startsWith('#/')) {
+      const id = window.location.hash.substring(1);
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 250);
+    }
+
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
