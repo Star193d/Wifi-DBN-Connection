@@ -2,18 +2,18 @@
 @import "leaflet/dist/leaflet.css";
 
 /* 
-  Durban Connect Wi-Fi Theme Guide
-  --------------------------------
-  Primary Color: A vibrant red for main actions.
-  Primary Light: A sleek gradient for accents.
-  Accent: Deep navy for high-contrast secondary elements.
+  Maroon Tech Theme Guide
+  -----------------------
+  Primary Color: A vibrant crimson Maroon (#B3071B) from the user's promo flyer.
+  Primary Light: Gradient of Maroon for accents.
+  Accent: Deep navy charcoal (#0F172A) for high-contrast elements.
   Transitions: Use these variables for uniform feeling of speed.
 */
 :root {
-  --color-primary: #D32F2F;
-  --color-primary-light: linear-gradient(90deg, rgba(211,47,47,1) 0%, rgba(255,255,255,1) 100%);
+  --color-primary: #B3071B;
+  --color-primary-light: linear-gradient(90deg, rgba(142,14,37,1) 0%, rgba(255,255,255,1) 100%);
   --color-white: #FFFFFF;
-  --color-accent: #0A2540;
+  --color-accent: #0F172A;
   
   --transition-fast: 180ms cubic-bezier(.2,.9,.3,1);
   --transition-medium: 320ms cubic-bezier(.2,.9,.3,1);

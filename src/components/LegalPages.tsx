@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   ArrowLeft, Shield, FileText, CheckSquare, Scale, HelpCircle, 
-  Check, Mail, Phone, MapPin, AlertTriangle, Smartphone, Info 
+  Check, Mail, Phone, MapPin, AlertTriangle, Info 
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -86,7 +86,7 @@ export default function LegalPages({ currentRoute, onNavigate }: LegalPagesProps
         <motion.div variants={itemVariants} className="col-span-1 lg:col-span-4 bg-white bento-item p-6 lg:p-8 flex flex-col gap-5">
           <div>
             <span className="text-xs font-bold text-[var(--color-primary)] uppercase tracking-widest block">Legal Directory</span>
-            <h1 className="text-2xl font-black text-[var(--color-accent)] mt-1 tracking-tight">Durban Connect Legal Centre</h1>
+            <h1 className="text-2xl font-black text-[var(--color-accent)] mt-1 tracking-tight">Maroon Tech Legal Centre</h1>
             <p className="text-xs text-slate-500 mt-2 leading-relaxed">
               Our network operates transparently and strictly in accordance with South Africa's Protection of Personal Information Act (POPIA) and ICASA guidelines.
             </p>
@@ -102,7 +102,7 @@ export default function LegalPages({ currentRoute, onNavigate }: LegalPagesProps
                   onClick={() => onNavigate(tab.id)}
                   className={`w-full flex items-center justify-between px-4 py-3 rounded-xl font-bold text-xs lg:text-sm transition-all text-left group ${
                     isActive 
-                      ? 'bg-[var(--color-primary)] text-white shadow-md shadow-red-200' 
+                      ? 'bg-[var(--color-primary)] text-white shadow-md shadow-red-900/10' 
                       : 'bg-slate-50 hover:bg-slate-100 text-slate-700 hover:text-[var(--color-accent)] border border-slate-100 hover:border-slate-200'
                   }`}
                 >
@@ -120,11 +120,11 @@ export default function LegalPages({ currentRoute, onNavigate }: LegalPagesProps
 
           <div className="border-t border-slate-100 pt-5 mt-2 bg-gradient-to-br from-red-50/50 to-transparent p-4 rounded-2xl border border-red-50/50">
             <h4 className="font-extrabold text-xs text-[var(--color-accent)] mb-1 flex items-center gap-1.5 font-sans">
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)] font-sans"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)]"></span>
               Local Support Center
             </h4>
             <p className="text-[11px] text-slate-500 leading-relaxed mb-3 font-sans">
-              Need assistance with data deletion request records, or local municipal agreements? Our legal desk is glad to assist.
+              Need assistance with data deletion request records, or local compliance agreements? Our legal desk is glad to assist.
             </p>
             <button 
               onClick={() => {
@@ -156,7 +156,7 @@ export default function LegalPages({ currentRoute, onNavigate }: LegalPagesProps
                   </span>
                   <h2 className="text-3xl font-extrabold text-[var(--color-accent)] tracking-tight font-sans">Your Privacy Matters</h2>
                   <p className="text-slate-500 text-sm mt-1 leading-relaxed font-sans">
-                    Durban Connect collects and processes personal information only where necessary to provide premium WiFi, local internet connectivity, dedicated customer support (via Florida Road center), automated billing, and compliance reporting. We process your details with absolute security.
+                    Maroon Tech collects and processes personal information only where necessary to provide premium WiFi, local internet connectivity, dedicated customer support (via Florida Road center), automated billing, and compliance reporting. We process your details with absolute security.
                   </p>
                 </div>
 
@@ -187,9 +187,9 @@ export default function LegalPages({ currentRoute, onNavigate }: LegalPagesProps
                     <div>
                       <h4 className="font-bold text-xs text-[var(--color-primary)] uppercase tracking-wider mb-2 font-sans">Customer Account Data</h4>
                       <ul className="space-y-1.5 text-xs text-slate-600 font-semibold font-sans">
-                        <li className="flex items-center gap-1.5 font-sans"><Check className="w-3.5 h-3.5 text-green-600 font-sans" /> Full Names & Identification Details</li>
-                        <li className="flex items-center gap-1.5 font-sans"><Check className="w-3.5 h-3.5 text-green-600 font-sans" /> Registered Contact Numbers</li>
-                        <li className="flex items-center gap-1.5 font-sans"><Check className="w-3.5 h-3.5 text-green-600 font-sans" /> Premium Email Addresses</li>
+                        <li className="flex items-center gap-1.5 font-sans"><Check className="w-3.5 h-3.5 text-green-600" /> Full Names & Identification Details</li>
+                        <li className="flex items-center gap-1.5 font-sans"><Check className="w-3.5 h-3.5 text-green-600" /> Registered Contact Numbers</li>
+                        <li className="flex items-center gap-1.5 font-sans"><Check className="w-3.5 h-3.5 text-green-600" /> Premium Email Addresses</li>
                         <li className="flex items-center gap-1.5 font-sans"><Check className="w-3.5 h-3.5 text-green-600" /> Residential Installation Markers</li>
                         <li className="flex items-center gap-1.5 font-sans"><Check className="w-3.5 h-3.5 text-green-600" /> EFT Payment Data (Debit Order Records)</li>
                         <li className="flex items-center gap-1.5 font-sans"><Check className="w-3.5 h-3.5 text-green-600" /> Service Telemetry records</li>
@@ -215,7 +215,7 @@ export default function LegalPages({ currentRoute, onNavigate }: LegalPagesProps
                   <h3 className="font-black text-sm text-[#FFD5D5] uppercase tracking-wider font-sans">Security & Protection Protocol</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-semibold text-slate-200">
                     <p className="leading-relaxed font-sans">
-                      Durban Connect deploys strict physical, logical, software, and organizational safeguards of the highest order to shield personal info from unauthorized breaches, extraction, disclosure, or physical sabotage.
+                      Maroon Tech deploys strict physical, logical, software, and organizational safeguards of the highest order to shield personal info from unauthorized breaches, extraction, disclosure, or physical sabotage.
                     </p>
                     <ul className="space-y-1 font-sans">
                       <li className="flex items-center gap-2 font-sans">✓ Dynamic Network Cryptographic Firewalls</li>
@@ -262,7 +262,7 @@ export default function LegalPages({ currentRoute, onNavigate }: LegalPagesProps
 
                 <div className="space-y-4 text-xs lg:text-sm text-slate-600 leading-relaxed">
                   <p className="font-sans">
-                    Welcome to Durban Connect. These General Terms of Service govern your active subscription, access keys, and technical use of our robust wireless network routers and connection setups inside the eThekwini Metropolitan precinct.
+                    Welcome to Maroon Tech. These General Terms of Service govern your active subscription, access keys, and technical use of our robust wireless network routers and connection setups inside the eThekwini Metropolitan precinct.
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -288,7 +288,7 @@ export default function LegalPages({ currentRoute, onNavigate }: LegalPagesProps
                     <Info className="w-5 h-5 text-[var(--color-primary)] shrink-0 mt-0.5" />
                     <div>
                       <p className="font-bold text-[var(--color-accent)] mb-0.5 font-sans">Regulatory Compliance Notice</p>
-                      <p className="text-[11px] text-slate-500 font-sans">Durban Connect conforms to the Code of Conduct issued by ICASA under South African telecommunication standard bylaws.</p>
+                      <p className="text-[11px] text-slate-500 font-sans">Maroon Tech conforms to the Code of Conduct issued by ICASA under South African telecommunication standard bylaws.</p>
                     </div>
                   </div>
                 </div>
@@ -308,7 +308,7 @@ export default function LegalPages({ currentRoute, onNavigate }: LegalPagesProps
 
                 <div className="space-y-4 text-xs lg:text-sm text-slate-600 leading-relaxed font-sans">
                   <p>
-                    To guarantee phenomenal internet speed and continuous access stability for businesses and families throughout Durban, we maintain a strict Acceptable Use Standard.
+                    To guarantee phenomenal internet speed and continuous access stability for businesses and families throughout the region, we maintain a strict Acceptable Use Standard.
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -320,7 +320,7 @@ export default function LegalPages({ currentRoute, onNavigate }: LegalPagesProps
                         <li>• Illegal downloads or copyright infringing transfers.</li>
                         <li>• Hacking, credential testing, or DDoS network abuse.</li>
                         <li>• Re-broadcasting or unauthorized lane resale.</li>
-                        <li>• Hosting automated high-volume scraping nodes.</li>
+                        <li>• Hosting automated high-volume scraping scraping nodes.</li>
                         <li>• Sharing of access passwords with non-subscribed neighbors.</li>
                       </ul>
                     </div>
@@ -355,7 +355,7 @@ export default function LegalPages({ currentRoute, onNavigate }: LegalPagesProps
 
                 <div className="space-y-4 text-xs lg:text-sm text-slate-600 leading-relaxed font-sans">
                   <p>
-                    Our billing structures are completely transparent, direct, and straightforward. Durban Connect accepts reliable instant EFT, credit cards, or cash voucher vouchers.
+                    Our billing structures are completely transparent, direct, and straightforward. Maroon Tech accepts reliable instant EFT, credit cards, or cash vouchers.
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -382,7 +382,7 @@ export default function LegalPages({ currentRoute, onNavigate }: LegalPagesProps
                     </div>
 
                     <div className="space-y-3 font-sans animate-fade-in">
-                      <h4 className="font-extrabold text-xs text-[var(--color-accent)] uppercase tracking-wider font-sans">Durban Connect Obligations</h4>
+                      <h4 className="font-extrabold text-xs text-[var(--color-accent)] uppercase tracking-wider font-sans">Maroon Tech Obligations</h4>
                       <ul className="space-y-2 text-xs text-slate-500 inline-block font-semibold font-sans">
                         <li className="flex items-start gap-1.5 font-sans">
                           <Check className="w-4 h-4 text-green-600 shrink-0 mt-0.5 font-sans" /> 
@@ -414,32 +414,32 @@ export default function LegalPages({ currentRoute, onNavigate }: LegalPagesProps
                   <span className="inline-flex px-2.5 py-1 bg-red-50 text-[var(--color-primary)] text-[10px] font-extrabold rounded-full mb-3 uppercase tracking-wider font-sans">
                     Limitation of Liability
                   </span>
-                  <h2 className="text-3xl font-extrabold text-[var(--color-accent)] tracking-tight font-sans font-sans">Liability & Service Terms</h2>
+                  <h2 className="text-3xl font-extrabold text-[var(--color-accent)] tracking-tight font-sans">Liability & Service Terms</h2>
                   <p className="text-xs text-slate-400 mt-1">Last Updated: May 2026</p>
                 </div>
 
                 <div className="space-y-4 text-xs lg:text-sm text-slate-600 leading-relaxed font-sans">
                   <p>
-                    These columns establish legal boundaries of liability between the subscriber and Durban Connect internet services.
+                    These columns establish legal boundaries of liability between the subscriber and Maroon Tech internet services.
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-3 bg-red-50/30 p-5 rounded-2xl border border-red-50 font-sans">
                       <h4 className="font-extrabold text-xs text-red-700 uppercase tracking-widest font-sans">Customer Liabilities</h4>
-                      <ul className="space-y-1.5 text-xs text-slate-600 font-bold list-disc pl-4 font-sans">
+                      <ul className="space-y-1.5 text-xs text-slate-600 font-bold list-disc pl-4 font-sans font-sans">
                         <li>Sustaining perfect safeguarding of antenna CPE and home routers from theft, drops, or fire damage.</li>
                         <li>Absolutely zero hardware settings alterations or internal physical router disassembly.</li>
                         <li>Compliance of any online downloads, sites, and logs connected to the account.</li>
-                        <li>Enabling safe, physical roof/line property clearances for Durban field deployment installers.</li>
+                        <li>Enabling safe, physical roof/line property clearances for field deployment installers.</li>
                       </ul>
                     </div>
 
                     <div className="space-y-3 bg-slate-50 p-5 rounded-2xl border border-slate-100 font-sans">
-                      <h4 className="font-extrabold text-xs text-[var(--color-accent)] uppercase tracking-widest font-sans">Durban Connect Liabilities</h4>
-                      <ul className="space-y-1.5 text-xs text-slate-600 font-bold list-disc pl-4 font-sans">
-                        <li>Durban Connect will exert high professional efforts to secure robust uptime indices.</li>
-                        <li>No liability is assumed for network delays provoked by loadshedding, thunder strikes, fiber damage, or force majeure.</li>
-                        <li>No liability exists for end-user computer software virus updates, firewalls, or browser errors.</li>
+                      <h4 className="font-extrabold text-xs text-[var(--color-accent)] uppercase tracking-widest font-sans">Maroon Tech Liabilities</h4>
+                      <ul className="space-y-1.5 text-xs text-slate-600 font-bold list-disc pl-4 font-sans font-sans">
+                        <li>Maroon Tech will exert high professional efforts to secure robust uptime indices.</li>
+                        <li>No liability is assumed for network delays provoked by loadshedding, lightning strikes, fiber damage, or force majeure.</li>
+                        <li>No liability exists for end-user computer software, virus actions, local firewalls, or browser errors.</li>
                         <li>Speeds may occasionally throttle slightly, conforming with peak regional hub limits.</li>
                       </ul>
                     </div>
@@ -461,7 +461,7 @@ export default function LegalPages({ currentRoute, onNavigate }: LegalPagesProps
 
                 <div className="space-y-4 text-xs lg:text-sm text-slate-600 leading-relaxed font-sans">
                   <p>
-                    All antennas, brackets, power adapters (PoE injectors), and WiFi routers provided by Durban Connect remain the absolute property of Durban Connect.
+                    All antennas, brackets, power adapters (PoE injectors), and WiFi routers provided by Maroon Tech remain the absolute property of Maroon Tech.
                   </p>
 
                   <div className="p-4 bg-red-50/50 border border-red-200/60 rounded-xl flex items-start gap-3 font-sans">
@@ -474,22 +474,22 @@ export default function LegalPages({ currentRoute, onNavigate }: LegalPagesProps
                     </div>
                   </div>
 
-                  <ul className="space-y-2 text-xs text-slate-500 inline-block font-semibold font-sans">
+                  <ul className="space-y-2 text-xs text-slate-505 inline-block font-semibold font-sans">
                     <li className="flex items-start gap-1.5 font-sans">
-                      <span className="w-1.5 h-1.5 bg-[var(--color-primary)] rounded-full shrink-0 mt-2 font-sans"></span>
-                      <span>Subscribers are prohibited from altering, transferring, or selling the routing equipment.</span>
+                      <span className="w-1.5 h-1.5 bg-[var(--color-primary)] rounded-full shrink-0 mt-2"></span>
+                      <span>Subscribers are prohibited from altering, transferring, over-clocking, or selling the routing equipment.</span>
                     </li>
                     <li className="flex items-start gap-1.5 font-sans">
-                      <span className="w-1.5 h-1.5 bg-[var(--color-primary)] rounded-full shrink-0 mt-2 font-sans"></span>
+                      <span className="w-1.5 h-1.5 bg-[var(--color-primary)] rounded-full shrink-0 mt-2"></span>
                       <span>Upon monthly subscription cancellation, all provided lines hardware must be gathered for field team collection within 14 business days.</span>
                     </li>
                     <li className="flex items-start gap-1.5 font-sans">
-                      <span className="w-1.5 h-1.5 bg-[var(--color-primary)] rounded-full shrink-0 mt-2 font-sans"></span>
+                      <span className="w-1.5 h-1.5 bg-[var(--color-primary)] rounded-full shrink-0 mt-2"></span>
                       <span>Lost, physically cracked, or power-surged routers (where surge protection keys were ignored) will be billed at full replacement cost.</span>
                     </li>
                     <li className="flex items-start gap-1.5 font-sans">
-                      <span className="w-1.5 h-1.5 bg-[var(--color-primary)] rounded-full shrink-0 mt-2 font-sans"></span>
-                      <span>We reserve the right to deploy technicians to replace old routing components with next-generation WiFi units when scheduled.</span>
+                      <span className="w-1.5 h-1.5 bg-[var(--color-primary)] rounded-full shrink-0 mt-2"></span>
+                      <span>We reserve the right to deploy technicians to replace old routing components with next-generation units when scheduled.</span>
                     </li>
                   </ul>
                 </div>
@@ -504,38 +504,38 @@ export default function LegalPages({ currentRoute, onNavigate }: LegalPagesProps
                     Statutory Officer
                   </span>
                   <h2 className="text-3xl font-extrabold text-[var(--color-accent)] tracking-tight font-sans">Compliance & Contact Details</h2>
-                  <p className="text-xs text-slate-400 mt-1 font-sans">Last Updated: May 2026</p>
+                  <p className="text-xs text-slate-400 mt-1">Last Updated: May 2026</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 font-sans">
                   <div className="bg-slate-50 border border-slate-100 p-6 rounded-2xl space-y-4">
                     <h3 className="font-extrabold text-sm text-[var(--color-accent)] flex items-center gap-2 font-sans">
                       <Shield className="w-4 h-4 text-[var(--color-primary)]" /> Statutory Information Officer
                     </h3>
                     <div className="space-y-2 text-xs text-slate-600 font-bold font-sans">
-                      <p><span className="text-slate-400 font-sans font-medium">Designated Deputy:</span> Mr. Sipho Ngcobo</p>
-                      <p><span className="text-slate-400 font-sans font-medium">Compliance Role:</span> Senior Counsel & Information Officer</p>
-                      <p className="flex items-center gap-1.5 font-sans"><Mail className="w-3.5 h-3.5 text-slate-400 font-sans" /> compliance@durbanconnect.co.za</p>
-                      <p className="flex items-center gap-1.5 font-sans"><Phone className="w-3.5 h-3.5 text-slate-400 font-sans" /> +27 (0) 31 555 0192</p>
+                      <p><span className="text-slate-405 font-medium">Designated Deputy:</span> Information Officer</p>
+                      <p><span className="text-slate-450 font-medium">Compliance Role:</span> Senior Counsel Compliance Desk</p>
+                      <p className="flex items-center gap-1.5"><Mail className="w-3.5 h-3.5 text-slate-400" /> compliance@maroontech.co.za</p>
+                      <p className="flex items-center gap-1.5"><Phone className="w-3.5 h-3.5 text-slate-400" /> +27 31 210 0318</p>
                     </div>
-                    <p className="text-[10px] text-slate-400 leading-relaxed font-sans font-medium">
-                      You are welcome to submit POPIA-specific audit requests, logs rectification forms, or billing escalation files directly to our Information Officer mailboxes.
+                    <p className="text-[10px] text-slate-400 leading-relaxed font-semibold">
+                      You are welcome to submit POPIA-specific audit requests, logs rectification forms, or billing escalation files directly to our Compliance Office.
                     </p>
                   </div>
 
-                  <div className="bg-slate-50 border border-slate-100 p-6 rounded-2xl space-y-4">
-                    <h3 className="font-extrabold text-sm text-[var(--color-accent)] flex items-center gap-2 font-sans">
-                      <MapPin className="w-4 h-4 text-[var(--color-primary)] font-sans" /> Durban Corporate Address
+                  <div className="bg-slate-50 border border-slate-100 p-6 rounded-2xl space-y-4 font-sans">
+                    <h3 className="font-extrabold text-sm text-[var(--color-accent)] flex items-center gap-2">
+                      <MapPin className="w-4 h-4 text-[var(--color-primary)]" /> Maroon Tech Address
                     </h3>
                     <div className="space-y-1.5 text-xs text-slate-600 font-bold font-sans">
-                      <p className="font-bold text-[var(--color-accent)]">Durban Connect Head Office</p>
+                      <p className="font-bold text-[var(--color-accent)]">Maroon Tech Office</p>
                       <p>102 Florida Road</p>
                       <p>Morningside</p>
                       <p>Durban</p>
                       <p>KwaZulu-Natal</p>
                       <p>4001, South Africa</p>
                     </div>
-                    <div className="text-[10px] text-slate-400 leading-relaxed pt-1.5 border-t border-slate-200 font-sans font-medium">
+                    <div className="text-[10px] text-slate-400 leading-relaxed pt-1.5 border-t border-slate-200 font-semibold font-sans">
                       Walk-ins are welcomed 08:30 – 16:30 for support assistance and hardware queries.
                     </div>
                   </div>

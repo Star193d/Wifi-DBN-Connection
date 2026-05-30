@@ -1,6 +1,6 @@
 {
-  "name": "Durban Connect Wi-Fi",
-  "description": "Affordable high-speed internet for Durban neighborhoods.",
+  "name": "Maroon Tech",
+  "description": "Affordable uncapped high-speed broadband and fiber connectivity solutions for homes and businesses throughout KZN.",
   "requestFramePermissions": [
     "geolocation"
   ],

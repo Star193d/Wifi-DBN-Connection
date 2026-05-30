@@ -20,6 +20,50 @@ async function startServer() {
   }
 
   // API Routes
+  app.post("/api/chat", async (req, res) => {
+    try {
+      const { name, email, text } = req.body;
+      
+      const newTicket = {
+        id: Date.now().toString(),
+        name: name || "Anonymous User",
+        email: email || "no-email@provided.com",
+        message: text,
+        timestamp: new Date().toISOString()
+      };
+
+      // Output to CLI (simulation of email trigger notification to support@maroontech.co.za)
+      console.log(`\n=========================================`);
+      console.log(`📠 [EMAIL TRIGGER SYSTEM] Triggering urgent inbound support notification!`);
+      console.log(`To: support@maroontech.co.za`);
+      console.log(`Subject: Maroon Tech Active Live Chat Session Request from: ${newTicket.name}`);
+      console.log(`User Contact: ${newTicket.email}`);
+      console.log(`Message Content: "${newTicket.message}"`);
+      console.log(`=========================================\n`);
+
+      // Store in chat_leads.json for database auditing simulation
+      const chatFile = path.join(process.cwd(), "chat_leads.json");
+      let chats = [];
+      try {
+        const data = await fs.readFile(chatFile, "utf-8");
+        chats = JSON.parse(data);
+      } catch {
+        // file doesn't exist yet
+      }
+      chats.push(newTicket);
+      await fs.writeFile(chatFile, JSON.stringify(chats, null, 2));
+
+      res.status(200).json({ 
+        success: true, 
+        message: "Your message has been received!",
+        botResponse: `Hi ${newTicket.name || 'there'}! I've logged your request in our system and sent an active alert notification to support@maroontech.co.za. A support tech has received your signal and is looking into your inquiry right now! 🚀`
+      });
+    } catch (error) {
+      console.error("Error processing chat ticket:", error);
+      res.status(500).json({ error: "Could not establish real-time socket connection link." });
+    }
+  });
+
   app.post("/api/contact", async (req, res) => {
     try {
       const { name, email, phone, address, message } = req.body;

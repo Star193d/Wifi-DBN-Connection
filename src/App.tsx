@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Pricing from './components/Pricing';
+import PromoOffers from './components/PromoOffers';
 import CoverageMap from './components/CoverageMap';
 import HowItWorks from './components/HowItWorks';
 import Testimonials from './components/Testimonials';
@@ -56,66 +57,92 @@ export default function App() {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.12,
-        delayChildren: 0.15
+        staggerChildren: 0.1,
+        delayChildren: 0.05
       }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 25 },
     show: { 
       opacity: 1, 
       y: 0,
       transition: {
         type: "spring",
-        stiffness: 70,
-        damping: 15
+        stiffness: 75,
+        damping: 14
       }
     }
   };
 
   return (
-    <AnimatePresence>
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.5 }}
-        className="min-h-screen flex flex-col font-sans bg-slate-50 text-slate-900"
-      >
-        <Navbar />
-        <motion.main 
-          variants={containerVariants}
-          initial="hidden"
-          animate="show"
-          className="flex-grow px-4 md:px-8 lg:px-12 xl:px-16 pt-24 md:pt-28 lg:pt-32 pb-12 md:pb-16 lg:pb-24 grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-7 lg:gap-8 xl:gap-10 mx-auto max-w-[1600px] w-full"
-        >
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.4 }}
+      className="min-h-screen flex flex-col font-sans bg-slate-50 text-slate-900 overflow-x-hidden"
+    >
+      <Navbar />
+      <main className="flex-grow px-4 md:px-8 lg:px-12 xl:px-16 pt-24 md:pt-28 lg:pt-32 pb-12 md:pb-16 lg:pb-24 mx-auto max-w-[1600px] w-full">
+        <AnimatePresence mode="wait">
           {isLegalRoute ? (
-            <div className="col-span-1 md:col-span-12">
+            <motion.div
+              key="legal"
+              initial={{ opacity: 0, y: 15, scale: 0.99 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -15, scale: 0.99 }}
+              transition={{ duration: 0.35, ease: "easeInOut" }}
+              className="w-full"
+            >
               <LegalPages currentRoute={currentHash} onNavigate={navigateTo} />
-            </div>
+            </motion.div>
           ) : isCompanyServicesRoute ? (
-            <div className="col-span-1 md:col-span-12">
+            <motion.div
+              key="company"
+              initial={{ opacity: 0, y: 15, scale: 0.99 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -15, scale: 0.99 }}
+              transition={{ duration: 0.35, ease: "easeInOut" }}
+              className="w-full"
+            >
               <CompanyServicesPages currentRoute={currentHash} onNavigate={navigateTo} />
-            </div>
+            </motion.div>
           ) : isHomeRoute ? (
-            <>
+            <motion.div
+              key="home"
+              variants={containerVariants}
+              initial="hidden"
+              animate="show"
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-7 lg:gap-8 xl:gap-10 w-full"
+            >
               <Hero variants={itemVariants} />
               <CoverageMap variants={itemVariants} />
               <Pricing variants={itemVariants} />
+              <PromoOffers variants={itemVariants} />
               <HowItWorks variants={itemVariants} />
               <Testimonials variants={itemVariants} />
               <FAQ variants={itemVariants} />
               <ContactForm variants={itemVariants} />
-            </>
+            </motion.div>
           ) : (
-            <NotFound onNavigate={navigateTo} />
+            <motion.div
+              key="notfound"
+              initial={{ opacity: 0, scale: 0.97 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.97 }}
+              transition={{ duration: 0.3 }}
+              className="w-full"
+            >
+              <NotFound onNavigate={navigateTo} />
+            </motion.div>
           )}
-        </motion.main>
-        <Footer />
-      </motion.div>
-    </AnimatePresence>
+        </AnimatePresence>
+      </main>
+      <Footer />
+    </motion.div>
   );
 }
-
