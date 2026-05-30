@@ -231,17 +231,13 @@ export default function PromoOffers({ variants }: PromoOffersProps) {
 
       {/* BOTTOM SECTION: Crimson/Maroon Support Contact Board */}
       <div 
-        className="relative bg-[#B3071B] text-white py-10 px-8 lg:px-12 flex flex-col lg:flex-row justify-between items-center gap-8"
+        className="group relative bg-white text-slate-800 hover:bg-[#B3071B] hover:text-white py-10 px-8 lg:px-12 flex flex-col lg:flex-row justify-between items-center gap-8 transition-all duration-300 border-t border-slate-100 cursor-pointer"
         style={{
-          boxShadow: 'inset 0 12px 24px -10px rgba(0,0,0,0.3)',
-          backgroundImage: `
-            radial-gradient(circle at 10% 20%, rgba(125,0,12,0.45) 0%, transparent 60%),
-            radial-gradient(circle at 90% 80%, rgba(125,0,12,0.45) 0%, transparent 60%)
-          `
+          boxShadow: 'inset 0 12px 24px -10px rgba(0,0,0,0.03)',
         }}
       >
         {/* Artistic Flower Splatter Patterns in exact Dark Red vector layers */}
-        <div className="absolute inset-0 opacity-15 pointer-events-none mix-blend-multiply select-none">
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-15 pointer-events-none mix-blend-multiply select-none transition-opacity duration-300">
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <g fill="#7D000C">
               {/* Splatters Left side */}
@@ -267,11 +263,11 @@ export default function PromoOffers({ variants }: PromoOffersProps) {
             href="tel:+27312100318"
             className="flex items-center gap-4 group cursor-pointer hover:translate-x-1.5 transition-transform duration-200"
           >
-            <div className="w-11 h-11 border-2 border-white rounded-full flex items-center justify-center bg-transparent group-hover:bg-white/10 transition-colors">
-              <Phone className="w-5 h-5 text-white" strokeWidth={2.5} />
+            <div className="w-11 h-11 border-2 border-[var(--color-primary)] group-hover:border-white rounded-full flex items-center justify-center bg-transparent group-hover:bg-white/10 transition-colors duration-300">
+              <Phone className="w-5 h-5 text-[var(--color-primary)] group-hover:text-white transition-colors duration-300" strokeWidth={2.5} />
             </div>
             <div>
-              <span className="text-lg md:text-xl font-bold tracking-wide">
+              <span className="text-lg md:text-xl font-bold tracking-wide text-slate-800 group-hover:text-white transition-colors duration-300">
                 Call: +27 31 210 0318
               </span>
             </div>
@@ -282,11 +278,11 @@ export default function PromoOffers({ variants }: PromoOffersProps) {
             onClick={handleWhatsappClick}
             className="flex items-center gap-4 group cursor-pointer hover:translate-x-1.5 transition-transform duration-200"
           >
-            <div className="w-11 h-11 border-2 border-white rounded-full flex items-center justify-center bg-transparent group-hover:bg-white/10 transition-colors">
-              <MessageSquare className="w-5 h-5 text-white" strokeWidth={2.5} />
+            <div className="w-11 h-11 border-2 border-[var(--color-primary)] group-hover:border-white rounded-full flex items-center justify-center bg-transparent group-hover:bg-white/10 transition-colors duration-300">
+              <MessageSquare className="w-5 h-5 text-[var(--color-primary)] group-hover:text-white transition-colors duration-300" strokeWidth={2.5} />
             </div>
             <div>
-              <span className="text-lg md:text-xl font-bold tracking-wide">
+              <span className="text-lg md:text-xl font-bold tracking-wide text-slate-800 group-hover:text-white transition-colors duration-300">
                 Whatsapp: +27 67 128 3281
               </span>
             </div>
@@ -297,11 +293,11 @@ export default function PromoOffers({ variants }: PromoOffersProps) {
             href="mailto:support@maroontech.co.za"
             className="flex items-center gap-4 group cursor-pointer hover:translate-x-1.5 transition-transform duration-200"
           >
-            <div className="w-11 h-11 border-2 border-white rounded-full flex items-center justify-center bg-transparent group-hover:bg-white/10 transition-colors">
-              <Mail className="w-5 h-5 text-white" strokeWidth={2.5} />
+            <div className="w-11 h-11 border-2 border-[var(--color-primary)] group-hover:border-white rounded-full flex items-center justify-center bg-transparent group-hover:bg-white/10 transition-colors duration-300">
+              <Mail className="w-5 h-5 text-[var(--color-primary)] group-hover:text-white transition-colors duration-300" strokeWidth={2.5} />
             </div>
             <div>
-              <span className="text-lg md:text-xl font-bold tracking-wide">
+              <span className="text-lg md:text-xl font-bold tracking-wide text-slate-800 group-hover:text-white transition-colors duration-300">
                 Email: support@maroontech.co.za
               </span>
             </div>

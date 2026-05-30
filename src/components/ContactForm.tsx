@@ -183,10 +183,10 @@ export default function ContactForm({ variants }: ContactFormProps) {
       className="col-span-1 md:col-span-12 bg-white bento-item overflow-hidden flex flex-col md:flex-row lg:col-span-12 font-sans"
     >
       {/* Brand Column with Animated Emojis */}
-      <div className="md:w-5/12 bg-[var(--color-primary)] text-white p-8 lg:p-12 flex flex-col justify-between relative overflow-hidden">
-        <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="group md:w-5/12 bg-white text-slate-800 hover:bg-[var(--color-primary)] hover:text-white p-8 lg:p-12 flex flex-col justify-between relative overflow-hidden transition-all duration-300 border-r border-slate-100 cursor-pointer">
+        <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-[var(--color-primary)]/5 group-hover:bg-white/10 rounded-full blur-3xl pointer-events-none transition-colors duration-300" />
         <div className="relative z-10">
-          <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
+          <div className="w-12 h-12 bg-[var(--color-primary)]/10 group-hover:bg-white/20 text-[var(--color-primary)] group-hover:text-white rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
             <motion.span 
               className="text-2xl inline-block"
               animate={{ 
@@ -202,19 +202,19 @@ export default function ContactForm({ variants }: ContactFormProps) {
               ⚡
             </motion.span>
           </div>
-          <h3 className="text-2xl md:text-3xl font-extrabold mb-4 leading-tight tracking-tight font-sans">
+          <h3 className="text-2xl md:text-3xl font-extrabold mb-4 leading-tight tracking-tight font-sans text-slate-900 group-hover:text-white transition-colors duration-300">
             Ready for better internet?
           </h3>
-          <p className="text-white/85 mb-8 max-w-sm text-xs md:text-sm leading-relaxed font-semibold">
+          <p className="text-slate-600 group-hover:text-white/85 mb-8 max-w-sm text-xs md:text-sm leading-relaxed font-semibold transition-colors duration-300">
             Get in touch using our callback dispatch form or start an interactive live session to alert support technicians immediately.
           </p>
         </div>
         
-        <div className="space-y-4 relative z-10 bg-white/10 p-5 rounded-2xl border border-white/20 backdrop-blur-sm">
+        <div className="space-y-4 relative z-10 bg-slate-50 group-hover:bg-white/10 p-5 rounded-2xl border border-slate-200/60 group-hover:border-white/20 backdrop-blur-sm transition-all duration-300">
           {/* Animated Call Phone Emoji */}
           <div className="flex items-center gap-4">
              <motion.div 
-               className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-lg shrink-0"
+               className="w-10 h-10 rounded-full bg-[var(--color-primary)]/10 group-hover:bg-white/20 flex items-center justify-center text-lg shrink-0 transition-colors duration-300"
                animate={{ 
                  scale: [1, 1.12, 1],
                  rotate: [0, -10, 10, -10, 0]
@@ -229,15 +229,15 @@ export default function ContactForm({ variants }: ContactFormProps) {
                 📞
               </motion.div>
              <div>
-                <div className="text-[10px] text-white/70 uppercase tracking-widest font-bold mb-0.5">Call Us</div>
-                <div className="font-extrabold text-base md:text-lg tracking-wide">+27 31 210 0318</div>
+                <div className="text-[10px] text-slate-400 group-hover:text-white/70 uppercase tracking-widest font-bold mb-0.5 transition-colors duration-300">Call Us</div>
+                <div className="font-extrabold text-base md:text-lg tracking-wide text-slate-800 group-hover:text-white transition-colors duration-300">+27 31 210 0318</div>
              </div>
           </div>
 
           {/* Animated Email Envelope Emoji */}
           <div className="flex items-center gap-4">
              <motion.div 
-               className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-lg shrink-0"
+               className="w-10 h-10 rounded-full bg-[var(--color-primary)]/10 group-hover:bg-white/20 flex items-center justify-center text-lg shrink-0 transition-colors duration-300"
                animate={{ 
                  y: [0, -3, 0]
                }}
@@ -250,8 +250,8 @@ export default function ContactForm({ variants }: ContactFormProps) {
                 ✉️
              </motion.div>
              <div>
-                <div className="text-[10px] text-white/70 uppercase tracking-widest font-bold mb-0.5">Email Support</div>
-                <div className="font-extrabold text-xs md:text-sm tracking-wide">support@maroontech.co.za</div>
+                <div className="text-[10px] text-slate-400 group-hover:text-white/70 uppercase tracking-widest font-bold mb-0.5 transition-colors duration-300">Email Support</div>
+                <div className="font-extrabold text-xs md:text-sm tracking-wide text-slate-800 group-hover:text-white transition-colors duration-300 font-sans">support@maroontech.co.za</div>
              </div>
           </div>
         </div>
